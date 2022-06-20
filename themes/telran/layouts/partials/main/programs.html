@@ -1,0 +1,23 @@
+<section class="programs">
+    {{ with .Site.GetPage "/programs" }}    
+    <h2 class="programs__header">{{ .Title }}</h2>
+    {{ range  .Pages.ByWeight  }}
+        <h3 class="programs__item-header">{{ .Weight }} — {{ .Title }}</h3>
+        {{ .Content }}
+        {{ with .Params.timing }}
+        <div class="programs__timing">
+            {{ range . }}
+            <span class="programs__timing-item">{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+        {{ with .Params.parts }}
+        <ul class="programs__parts">
+            {{ range . }}
+            <li class="programs__parts-item">{{ . }}</li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    {{ end }}
+    {{ end }}
+</section>

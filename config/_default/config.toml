@@ -1,0 +1,13 @@
+baseURL = 'http://example.org/'
+defaultContentLanguage = 'en'
+theme = "telran"
+disableKinds = ["taxonomy", "term"]
+
+
+[languages]
+    [languages.en]
+        contentDir = 'content/en'
+        title = "New Tel Ran site"
+    [languages.ru]
+        contentDir = 'content/ru'
+        title = "Новый сайт школы Tel Ran"

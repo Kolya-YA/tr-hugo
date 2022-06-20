@@ -1,0 +1,9 @@
+<section class="events">
+    {{ with .Site.GetPage "/events" }}
+    <h2 class="events__header">{{ .Title }}</h2>
+    <div class="events__subheader">{{ .Params.Subtitle }}</div>
+    {{ range  .Pages.ByDate  }}
+    <div>Events list</div>
+    {{ end }}
+    {{ end }}
+</section>
