@@ -24,5 +24,4 @@ links:
   comment: '+25% к успеху'
 ---
 
-**Kommt bald!** ***Bleiben Sie dran!***
 **Comming soon! Stay tuned!**

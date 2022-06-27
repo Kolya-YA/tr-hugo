@@ -1,41 +1,45 @@
 <div class="main">
-{{ with .Params.motos }}
-<ul class="main__motos">
-    {{ range . }}
-    <li class="main__moto-item">{{ . }}</li>
-    {{ end }}
-</ul>
-{{ end }}
-
-{{ with .Site.GetPage "/programs" }}
-<ul class="main__programs">
-{{ range  .Pages.ByWeight  }}
-    <li class="main__program-item">{{ .Weight }} "{{ .Title }}", id-target = "{{ .Params.id }}"</li>
-{{ end }}
-</ul>
-{{ end }}
-
-{{ with .Params.certificate}}
-<div class="main__certificete">
-    {{ .text }} — {{ .logo }}
-</div>
-{{ end }}
-<h1 class="main__title">{{ .Title }}</h1>
-{{ with .Params.subtitle }}
-<h2 class="main__subtitle">{{ . }}</h2>
-{{ end }}
-{{ with .Params.announce }}
-<div class="main__announce">{{ . }}</div>
-{{ end }}
-{{ with .Params.links }}
-<ul class="main__links">
-    {{ range .items }}
-    <li class="main__link-item">{{ index . 0 }} — id-target = "{{ index . 1 }}"</li>
-    {{ end }}
-</ul>
-{{ with .comment }}
-<div class="main__links-comment">{{ . }}</div>
-{{ end }}
-{{ end }}
-{{ .Content }}
+    <div class="main-top">
+        {{ with .Params.motos }}
+        <ul class="main-top__moto">
+            {{ range . }}
+            <li class="main-top__moto-item">{{ . }}</li>
+            {{ end }}
+        </ul>
+        {{ end }}
+        {{ with .Site.GetPage "/programs" }}
+        <ul class="main-top__program">
+        {{ range  .Pages.ByWeight  }}
+            <li class="main-top__program-item">
+                <a href="#{{ .Params.id }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+        </ul>
+        {{ end }}
+        {{ with .Params.certificate}}
+        <div class="main-top__certificete">
+            {{ .text }} — {{ .logo }}
+        </div>
+        {{ end }}
+    </div>
+    <div class="main-bottom">
+        <h1 class="main__title">{{ .Title }}</h1>
+        {{/*  {{ with .Params.subtitle }}
+        <h2 class="main__subtitle">{{ . }}</h2>
+        {{ end }}  */}}
+        {{ with .Params.announce }}
+        <div class="main__announce">{{ . }}</div>
+        {{ end }}
+        {{ with .Params.links }}
+        <ul class="main__links">
+            {{ range .items }}
+            <li class="main__link-item">{{ index . 0 }} — id-target = "{{ index . 1 }}"</li>
+            {{ end }}
+        </ul>
+        {{ with .comment }}
+        <div class="main__links-comment">{{ . }}</div>
+        {{ end }}
+        {{ end }}
+        {{ .Content }}
+    </div>
 </div>

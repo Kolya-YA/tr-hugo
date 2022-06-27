@@ -1,6 +1,6 @@
 ---
 date: "2022-06-20"
-title: "Frontnd Development"
+title: "Frontend Development"
 weight: 2
 id: 'frontend'
 

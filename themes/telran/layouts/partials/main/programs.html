@@ -1,5 +1,5 @@
 <section class="programs">
-    {{ with .Site.GetPage "/programs" }}    
+    {{ with .Site.GetPage "/programs" }}
     <h2 class="programs__header">{{ .Title }}</h2>
     {{ range  .Pages.ByWeight  }}
         <h3 class="programs__item-header">{{ .Weight }} — {{ .Title }}</h3>
