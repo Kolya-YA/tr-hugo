@@ -7,6 +7,7 @@ announce: 'Start of a new stream 23/06/2022'
 
 motos: [
   'Improve your English proficiency',
+  'Learn fundamental IT skills',
   'Land a job'
 ]
 

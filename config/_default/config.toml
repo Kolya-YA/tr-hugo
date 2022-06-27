@@ -3,11 +3,20 @@ defaultContentLanguage = 'en'
 theme = "telran"
 disableKinds = ["taxonomy", "term"]
 
+[params]
+    logoName = "Tel-Ran"
+    email = "start@tel-ran.de"
+    phone = "+49 1573 598 9554"
+
 
 [languages]
     [languages.en]
         contentDir = 'content/en'
         title = "New Tel Ran site"
+        headerMoto = "Cultivating IT talent since 1993"
+        headerAnnounce = "Requests for classes are accepted until 23.06.2022"
     [languages.ru]
         contentDir = 'content/ru'
         title = "Новый сайт школы Tel Ran"
+        headerMoto = "С 1993 года обучаем IT-профессиям"
+        headerAnnounce = "Приём заявок в группы до 23.06.2022"

@@ -1,0 +1,20 @@
+[[top]]
+    name = "Home"
+    weight = 10
+    url = "#"
+[[top]]
+    name = "Programs"
+    weight = 20
+    url = "#"
+[[top]]
+    name = "Tuition financing"
+    weight = 30
+    url = "#"
+[[top]]
+    name = "Contacts"
+    weight = 40
+    url = "#"
+[[top]]
+    name = "Take a test"
+    weight = 50
+    url = "#"

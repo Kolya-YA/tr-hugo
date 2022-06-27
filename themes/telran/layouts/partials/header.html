@@ -1,5 +1,37 @@
 <header class="header">
-    <h4>Main header — logo & menu</h4>
-
-    {{ partial "i18nlist" . }}
+    <div class="width-wrapper">
+        <div class="header-top">
+            <div class="header-top__logo-moto">
+                <div class="__logo">{{ .Site.Params.logoName }}</div>
+                <div class="__moto">{{ .Site.Params.headerMoto }}</div>
+            </div>
+            <div class="header-top__lang">
+                {{ partial "i18nlist" . }}
+            </div>
+            <div class="header-top__contacts">
+                <div class="header-top__contacts-phone">{{ .Site.Params.phone }}</div>
+                <div class="header-top__contacts-email">{{ .Site.Params.email }}</div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="header-bottom__announce">
+                {{ .Site.Params.headerAnnounce }}
+            </div>
+            <div class="header-bottom__menu">
+                <div class="header-bottom__toggler">
+                    ☰  ✕
+                </div>
+                <nav class="top-menu">
+                    <ul class="top-menu__list">
+                        {{ range .Site.Menus.top }}
+                        <li class="top-menu__item">
+                            <a href="{{ .URL }}">{{ .Name }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </nav>
+            </div>
+        </div>    
+    </div>
 </header>
+<hr>

@@ -1,0 +1,20 @@
+[[top]]
+    name = "Главная"
+    weight = 10
+    url = "#"
+[[top]]
+    name = "Курсы"
+    weight = 20
+    url = "#"
+[[top]]
+    name = "Финансирование"
+    weight = 30
+    url = "#"
+[[top]]
+    name = "Контакты"
+    weight = 40
+    url = "#"
+[[top]]
+    name = "Пройти тест"
+    weight = 50
+    url = "#"
