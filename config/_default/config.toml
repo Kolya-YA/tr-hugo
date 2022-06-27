@@ -8,7 +8,6 @@ disableKinds = ["taxonomy", "term"]
     email = "start@tel-ran.de"
     phone = "+49 1573 598 9554"
 
-
 [languages]
     [languages.en]
         contentDir = 'content/en'

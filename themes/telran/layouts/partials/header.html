@@ -9,19 +9,40 @@
                 {{ partial "i18nlist" . }}
             </div>
             <div class="header-top__contacts">
-                <div class="header-top__contacts-phone">{{ .Site.Params.phone }}</div>
-                <div class="header-top__contacts-email">{{ .Site.Params.email }}</div>
+                <div class="header-top__contacts-phone">
+                    <a href="tel:{{ replace .Site.Params.phone " " "" }}">{{ .Site.Params.phone }}</a>
+                </div>
+                <div class="header-top__contacts-email">
+                    <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+                </div>
             </div>
         </div>
         <div class="header-bottom">
+            <div class="header-bottom__logo-moto">
+                <img 
+                    class="header-bottom__logo"
+                    src=""
+                    alt="{{ .Site.Params.logoName }}"
+                    width="120"
+                    height="27"
+                    >
+                <div class="header-bottom__moto">{{ .Site.Params.headerMoto }}</div>
+            </div>
             <div class="header-bottom__announce">
                 {{ .Site.Params.headerAnnounce }}
             </div>
-            <div class="header-bottom__menu">
-                <div class="header-bottom__toggler">
-                    ☰  ✕
+            <div class="header-bottom__nav-show" id="navShow">
+                <button>☰</button>
+            </div>
+            {{/*  <div class="header-bottom__nav header-bottom__nav--open" id="navTop">  */}}
+            <div class="header-bottom__nav" id="navTop">
+                <div class="header-bottom__lang">
+                    {{ partial "i18nlist" . }}
                 </div>
-                <nav class="top-menu">
+                <div class="header-bottom__nav-hide" id="navHide">
+                    <button>✕</button>
+                </div>
+                <nav class="header-bottom__menu top-menu">
                     <ul class="top-menu__list">
                         {{ range .Site.Menus.top }}
                         <li class="top-menu__item">
@@ -34,4 +55,3 @@
         </div>    
     </div>
 </header>
-<hr>

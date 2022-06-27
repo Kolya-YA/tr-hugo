@@ -1,8 +1,7 @@
 {{ if .IsTranslated }}
-<h4>{{ i18n "translations" }}</h4>
-<ul>
+<ul class="lang-menu">
     {{ range .Translations }}
-    <li>
+    <li class="lang-menu__item">
         <a href="{{ .Permalink }}">{{ .Lang }}</a>
     </li>
     {{ end }}
