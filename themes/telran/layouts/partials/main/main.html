@@ -17,8 +17,11 @@
         </ul>
         {{ end }}
         {{ with .Params.certificate}}
-        <div class="main-top__certificete">
-            {{ .text }} — {{ .logo }}
+        <div class="main-top__certificate">
+            <div class="main-top__certificate-text">{{ .text }}</div>
+            <div class="main-top__certificate-logo">
+                {{ .logo }}
+            </div>
         </div>
         {{ end }}
     </div>
