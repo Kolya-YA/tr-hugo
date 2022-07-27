@@ -9,7 +9,8 @@ html {
 }
 
 body {
-    height: 100vh;
+  min-height: 100vh;
+  min-width: 360px;
   margin: 0;
   font-family: var(--common-font-family);
   font-size: var(--common_font-size);

@@ -1,126 +1,28 @@
 .header {
+    position: relative;
     box-shadow: 0 0 6px #999;
 
-    .header-top {
-        display: flex;
+    &__nav-toggler {
+        position: absolute;
+        right: 0;
+        top: 0;
 
-        background-color: var(--main-yellow);
+        padding: 1rem;
 
-        &__logo-moto {
-            display: none;
-        }
-
-        &__lang {
-            display: none;
-        }
-
-        &__contacts {
-            margin-left: auto;
-
-            a {
-                display: inline-block;
-                font-size: 1.2rem;
-                color: var(--text-main-color);
-                text-decoration: none;
-                padding: 1rem;
-                cursor: pointer;
-
-                &:hover {
-                    color: var(--main-red)
-                }
-            }
-        }
-
-        
-        &__contacts-phone {
-
-            &::before {
-                content: '\01F4DE';
-            }
-        }
-        
-        &__contacts-email {
-            display: none;
-
-            &::before {
-                content: '\2709';
-                font-size: 2em;
-            }
-        }
-    }
-
-    .header-bottom {
-
-        display: flex;
-        justify-content: space-between;
-
-        &__logo-moto {
-            padding: 1rem;
-        }
-
-        &__logo {
+        button {
             display: block;
-            margin-bottom: .4rem;
-            background-color: #ccc;
-        }
-
-        &__moto {
-            font-size: .9rem;
-        }
-
-        &__announce {
-            display: none;
-        }
-        
-        &__nav-show {
-            padding: 1.5rem;
-
-            button {
-                font-size: 2rem;
-            }
-        }
-
-        &__nav {
-            display: none;
-
-            &--open {
-                background-color: #000000aa;
-                display: block;
-                display: flex;
-                flex-direction: column;
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-            }
-        }
-
-        &__lang {
-            width: 360px;
-            margin-left: auto;
-            padding: .8rem;
-            background-color: var(--main-yellow);
-        }
-
-        &__nav-hide {
-            width: 360px;
-            margin-left: auto;
-            padding: 1.5rem;
-            background-color: var(--main-yellow);            
-            text-align: right;
-            
-            button {
-                font-size: 2rem;
-            }
-        }
-        
-        &__menu {
-            flex-grow: 2;
-            width: 360px;
-            margin-left: auto;
-            padding: 1.5rem;
-            background-color: var(--main-yellow);
+            appearance: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            font-size: 3rem;
+            line-height: 0;
         }
     }
+
+    @import 'header-top';
+    @import 'header-bottom';
+
+    
 }
