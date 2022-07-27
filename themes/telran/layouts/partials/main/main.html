@@ -1,5 +1,10 @@
+{{ $bgImage := .Resources.GetMatch "office_view.jpg" }}
+
 <div class="main">
     <div class="main-top">
+        <div class="main-top__bg">
+            <img class="main-top__bg-img" src="{{ $bgImage.RelPermalink }}" width="{{ $bgImage.Width }}" height="{{ $bgImage.Height }}">
+        </div>
         <div class="main-first">
             {{ with .Params.motos }}
             <ul class="main__moto">

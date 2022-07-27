@@ -3,6 +3,7 @@ date: "2022-06-20"
 title: "International School of Technology Tel-Ran"
 description: 'Learn fundamental IT skills. Improve your English proficiency. Land a job.'
 announce: 'ACCEPTANCE OF APPLICATIONS TO GROUPS IS OPEN UNTIL JULY 30'
+bgImage: 'office_view.sm.jmg'
 
 motos: [
   'Improve your English proficiency',
@@ -23,8 +24,8 @@ links:
   comment: '+25% to your success'
 ---
 
-and a message for next generation
+## Message for the next generation
 
-**ACCEPTANCE of APPLICATIONS to GROUPS is OPEN UNTIL JULY 30**
+ACCEPTANCE of APPLICATIONS to GROUPS is OPEN UNTIL JULY 30
 
 SLOTS LEFT : 7 slots
