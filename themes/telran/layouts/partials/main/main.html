@@ -1,48 +1,51 @@
 <div class="main">
     <div class="main-top">
-        {{ with .Params.motos }}
-        <ul class="main-top__moto">
-            {{ range . }}
-            <li class="main-top__moto-item">{{ . }}</li>
+        <div class="main-first">
+            {{ with .Params.motos }}
+            <ul class="main__moto">
+                {{ range . }}
+                <li class="main__moto-item">{{ . }}</li>
+                {{ end }}
+            </ul>
             {{ end }}
-        </ul>
-        {{ end }}
-        {{ with .Site.GetPage "/programs" }}
-        <ul class="main-top__program">
-        {{ range  .Pages.ByWeight  }}
-            <li class="main-top__program-item">
-                <a href="#{{ .Params.id }}">{{ .Title }}</a>
-            </li>
-        {{ end }}
-        </ul>
-        {{ end }}
-        {{ with .Params.certificate}}
-        <div class="main-top__certificate">
-            <div class="main-top__certificate-text">{{ .text }}</div>
-            <div class="main-top__certificate-logo">
-                {{ .logo }}
+            {{ with .Site.GetPage "/programs" }}
+            <ul class="main__program">
+            {{ range  .Pages.ByWeight  }}
+                <li class="main__program-item">
+                    <a href="#{{ .Params.id }}">{{ .Title }}</a>
+                </li>
+            {{ end }}
+            </ul>
+            {{ end }}
+            {{ with .Params.certificate}}
+            <div class="main__certificate">
+                <div class="main__certificate-logo">
+                    {{ .logo }}
+                </div>
+                <div class="main__certificate-text">{{ .text }}</div>
             </div>
+            {{ end }}
         </div>
-        {{ end }}
+        <div class="main-second">
+            <h1 class="main__title">{{ .Title }}</h1>
+            {{ with .Params.links }}
+            <ul class="main__links">
+                {{ range .items }}
+                <li class="main__links-item">
+                <a href="#{{ index . 1 }}"> {{ index . 0 }}"</a>
+                </li>
+                {{ end }}
+            </ul>
+            {{ with .comment }}
+            <div class="main__links-comment">{{ . }}</div>
+            {{ end }}
+            {{ end }}
+        </div>
     </div>
-    <div class="main-bottom">
-        <h1 class="main__title">{{ .Title }}</h1>
-        {{/*  {{ with .Params.subtitle }}
-        <h2 class="main__subtitle">{{ . }}</h2>
-        {{ end }}  */}}
+    <section class="main__content">
         {{ with .Params.announce }}
         <div class="main__announce">{{ . }}</div>
         {{ end }}
-        {{ with .Params.links }}
-        <ul class="main__links">
-            {{ range .items }}
-            <li class="main__link-item">{{ index . 0 }} — id-target = "{{ index . 1 }}"</li>
-            {{ end }}
-        </ul>
-        {{ with .comment }}
-        <div class="main__links-comment">{{ . }}</div>
-        {{ end }}
-        {{ end }}
         {{ .Content }}
-    </div>
+    </section>
 </div>

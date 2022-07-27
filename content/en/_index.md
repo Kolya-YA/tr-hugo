@@ -1,9 +1,8 @@
 ---
 date: "2022-06-20"
 title: "International School of Technology Tel-Ran"
-subtitle: "Improve your English proficiency. Land a job."
-description: 'Improve your English proficiency. Land a job.'
-announce: 'Start of a new stream 23/06/2022'
+description: 'Learn fundamental IT skills. Improve your English proficiency. Land a job.'
+announce: 'ACCEPTANCE OF APPLICATIONS TO GROUPS IS OPEN UNTIL JULY 30'
 
 motos: [
   'Improve your English proficiency',
@@ -24,5 +23,8 @@ links:
   comment: '+25% to your success'
 ---
 
-**Kommt bald! Bleiben Sie dran!**
-**Comming soon! Stay tuned!**
+and a message for next generation
+
+**ACCEPTANCE of APPLICATIONS to GROUPS is OPEN UNTIL JULY 30**
+
+SLOTS LEFT : 7 slots

@@ -1,4 +1,4 @@
-const motos = document.querySelector('.main-top__moto')
+const motos = document.querySelector('.main__moto')
 const motoItems = motos.children
 
 let curItem = 0

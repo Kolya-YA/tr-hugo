@@ -1,9 +1,9 @@
-.main-top {        
+.main-first {        
     padding: 1rem;
-    background-color: var(--dark-bgc);
+    background-color: var(--dark-overlay-color);
     color: var(--light-text-color);
 
-    &__moto {
+    .main__moto {
         // background-color: #555;
 
         height: 90px;
@@ -19,8 +19,8 @@
         }
     }
 
-    &__program {
-        margin: 0 0 16px;
+    .main__program {
+        margin: 0 0 2rem;
         padding: 0;
         list-style: none;
 
@@ -36,14 +36,22 @@
             text-align: center;
             border: 2px solid var(--light-text-color);
             border-radius: 100px;
+            transition-duration: 200ms;
+
+            &:hover {
+                background-color: var(--main-red);
+                border-color: var(--main-red);
+            }
         }
     }
 
-    &__certificate {
+    .main__certificate {
+        display: flex;
         font-size: .9rem;
+        margin-bottom: 10px;
 
         &-text {
-            margin-bottom: 10px;
+            margin: .5rem 1rem;
         }
 
         &-logo {
