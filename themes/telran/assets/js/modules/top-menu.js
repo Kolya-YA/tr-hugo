@@ -3,7 +3,7 @@ const navShowBtn = document.querySelector('#navShow')
 const navTop = document.querySelector('#navTop')
 
 navShowBtn.addEventListener('click', () => {
-    navTop.classList.toggle('header-bottom__nav--open')
+    navTop.classList.toggle('header-bottom--open')
     document.body.style.position = 'fixed'
     document.body.style.top = `-${window.scrollY}px`
 })
@@ -11,7 +11,7 @@ navShowBtn.addEventListener('click', () => {
 // navHideBtn.addEventListener('click', () => {
 navTop.addEventListener('click', (e) => {
     console.log(e)
-    navTop.classList.toggle('header-bottom__nav--open')
+    navTop.classList.toggle('header-bottom--open')
     const scrollY = document.body.style.top
     document.body.style.position = ''
     document.body.style.top = ''

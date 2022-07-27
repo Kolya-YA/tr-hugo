@@ -1,46 +1,34 @@
 .header-bottom {
-
-    &__announce {
-        // display: none;
-    }
+    display: none;
     
-    &__nav {
-        display: none;
-
-        &--open {
-            background-color: #000000aa;
-            display: block;
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
+    &--open {
+        background-color: #000000aa;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
     }
-
+        
     &__lang {
         width: 360px;
         margin-left: auto;
         padding: .8rem;
         background-color: var(--main-yellow);
     }
-
-    &__nav-hide {
-        width: 360px;
-        margin-left: auto;
-        padding: 1.5rem;
-        background-color: var(--main-yellow);            
-        text-align: right;
-        
-        button {
-            font-size: 2rem;
-        }
-    }
     
     &__menu {
         flex-grow: 2;
+        width: 360px;
+        margin-left: auto;
+        padding: 1.5rem;
+        background-color: var(--main-yellow);
+    }
+
+    &__announce {
         width: 360px;
         margin-left: auto;
         padding: 1.5rem;
